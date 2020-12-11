@@ -1,0 +1,20 @@
+{{>header/base}}
+
+<div class="section">
+    <h1>Books</h1>
+    <ul class="row">
+        {{#books}}
+            {{>book_card}}
+        {{/books}}
+    </ul>
+</div>
+
+<div class="section">
+    <h2 class="title">Wanna upload a book?</h2>
+    <a class="btn waves-effect waves-teal light-blue darken-3" href="/book/new">
+        <span>Go to book uploader</span>
+        <i class="material-icons right">arrow_forward</i>
+    </a>
+</div>
+
+{{>footer}}
