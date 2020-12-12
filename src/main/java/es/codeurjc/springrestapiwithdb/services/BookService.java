@@ -1,4 +1,4 @@
-package es.codeurjc.springwebrestapi.services;
+package es.codeurjc.springrestapiwithdb.services;
 
 import java.io.IOException;
 import java.net.URL;
@@ -12,7 +12,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.springframework.stereotype.Service;
 
-import es.codeurjc.springwebrestapi.models.Book;
+import es.codeurjc.springrestapiwithdb.models.Book;
 
 @Service
 public class BookService {

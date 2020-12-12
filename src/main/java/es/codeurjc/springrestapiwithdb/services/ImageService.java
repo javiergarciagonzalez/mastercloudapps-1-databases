@@ -1,4 +1,4 @@
-package es.codeurjc.springwebrestapi.services;
+package es.codeurjc.springrestapiwithdb.services;
 
 
 import java.io.IOException;

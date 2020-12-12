@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>es.codeurjc</groupId>
-	<artifactId>spring-web-rest-api</artifactId>
+	<artifactId>spring-rest-api-with-db</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-web-rest-api</name>
+	<name>spring-rest-api-with-db</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

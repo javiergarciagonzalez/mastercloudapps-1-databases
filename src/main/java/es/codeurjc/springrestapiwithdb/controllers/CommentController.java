@@ -1,4 +1,4 @@
-package es.codeurjc.springwebrestapi.controllers;
+package es.codeurjc.springrestapiwithdb.controllers;
 
 import java.util.List;
 
@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import es.codeurjc.springwebrestapi.models.Book;
-import es.codeurjc.springwebrestapi.models.Comment;
-import es.codeurjc.springwebrestapi.models.User;
-import es.codeurjc.springwebrestapi.services.BookService;
-import es.codeurjc.springwebrestapi.services.CommentService;
+import es.codeurjc.springrestapiwithdb.models.Book;
+import es.codeurjc.springrestapiwithdb.models.Comment;
+import es.codeurjc.springrestapiwithdb.models.User;
+import es.codeurjc.springrestapiwithdb.services.BookService;
+import es.codeurjc.springrestapiwithdb.services.CommentService;
 
 @Controller
 public class CommentController {

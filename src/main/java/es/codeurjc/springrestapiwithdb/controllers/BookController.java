@@ -1,11 +1,11 @@
-package es.codeurjc.springwebrestapi.controllers;
+package es.codeurjc.springrestapiwithdb.controllers;
 
-import es.codeurjc.springwebrestapi.models.Book;
-import es.codeurjc.springwebrestapi.models.Comment;
-import es.codeurjc.springwebrestapi.services.BookService;
-import es.codeurjc.springwebrestapi.services.CommentService;
-import es.codeurjc.springwebrestapi.services.ImageService;
-import es.codeurjc.springwebrestapi.services.PublisherService;
+import es.codeurjc.springrestapiwithdb.models.Book;
+import es.codeurjc.springrestapiwithdb.models.Comment;
+import es.codeurjc.springrestapiwithdb.services.BookService;
+import es.codeurjc.springrestapiwithdb.services.CommentService;
+import es.codeurjc.springrestapiwithdb.services.ImageService;
+import es.codeurjc.springrestapiwithdb.services.PublisherService;
 
 import java.io.IOException;
 import java.net.MalformedURLException;

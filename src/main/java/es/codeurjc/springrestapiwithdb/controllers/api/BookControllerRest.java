@@ -1,4 +1,4 @@
-package es.codeurjc.springwebrestapi.controllers.api;
+package es.codeurjc.springrestapiwithdb.controllers.api;
 
 import static org.springframework.web.servlet.support.ServletUriComponentsBuilder.fromCurrentRequest;
 
@@ -19,13 +19,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import es.codeurjc.springwebrestapi.models.Book;
-import es.codeurjc.springwebrestapi.models.BookDto;
-import es.codeurjc.springwebrestapi.models.Comment;
-import es.codeurjc.springwebrestapi.models.BookDto.BasicDto;
-import es.codeurjc.springwebrestapi.models.mappers.BookMapper;
-import es.codeurjc.springwebrestapi.services.BookService;
-import es.codeurjc.springwebrestapi.services.CommentService;
+import es.codeurjc.springrestapiwithdb.models.Book;
+import es.codeurjc.springrestapiwithdb.models.BookDto;
+import es.codeurjc.springrestapiwithdb.models.Comment;
+import es.codeurjc.springrestapiwithdb.models.BookDto.BasicDto;
+import es.codeurjc.springrestapiwithdb.models.mappers.BookMapper;
+import es.codeurjc.springrestapiwithdb.services.BookService;
+import es.codeurjc.springrestapiwithdb.services.CommentService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;

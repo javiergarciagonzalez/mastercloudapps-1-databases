@@ -1,4 +1,4 @@
-package es.codeurjc.springwebrestapi.services;
+package es.codeurjc.springrestapiwithdb.services;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,8 +11,8 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Service;
 
-import es.codeurjc.springwebrestapi.models.Comment;
-import es.codeurjc.springwebrestapi.models.User;
+import es.codeurjc.springrestapiwithdb.models.Comment;
+import es.codeurjc.springrestapiwithdb.models.User;
 
 @Service
 public class CommentService {

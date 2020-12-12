@@ -1,4 +1,4 @@
-package es.codeurjc.springwebrestapi.models;
+package es.codeurjc.springrestapiwithdb.models;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

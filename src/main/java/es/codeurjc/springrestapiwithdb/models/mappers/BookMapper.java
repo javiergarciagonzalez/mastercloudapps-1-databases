@@ -1,12 +1,12 @@
-package es.codeurjc.springwebrestapi.models.mappers;
+package es.codeurjc.springrestapiwithdb.models.mappers;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import es.codeurjc.springwebrestapi.models.Book;
-import es.codeurjc.springwebrestapi.models.BookDto;
-import es.codeurjc.springwebrestapi.models.Comment;
+import es.codeurjc.springrestapiwithdb.models.Book;
+import es.codeurjc.springrestapiwithdb.models.BookDto;
+import es.codeurjc.springrestapiwithdb.models.Comment;
 
 @Service
 public class BookMapper {

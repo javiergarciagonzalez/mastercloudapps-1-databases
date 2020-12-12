@@ -1,4 +1,4 @@
-package es.codeurjc.springwebrestapi.controllers;
+package es.codeurjc.springrestapiwithdb.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

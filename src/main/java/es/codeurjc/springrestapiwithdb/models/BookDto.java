@@ -1,4 +1,4 @@
-package es.codeurjc.springwebrestapi.models;
+package es.codeurjc.springrestapiwithdb.models;
 
 import java.util.List;
 

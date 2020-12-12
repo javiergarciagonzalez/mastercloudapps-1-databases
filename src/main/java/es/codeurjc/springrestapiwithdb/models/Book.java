@@ -1,4 +1,4 @@
-package es.codeurjc.springwebrestapi.models;
+package es.codeurjc.springrestapiwithdb.models;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
