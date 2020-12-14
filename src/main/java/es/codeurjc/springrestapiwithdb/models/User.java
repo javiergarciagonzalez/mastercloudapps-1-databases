@@ -1,25 +1,35 @@
 package es.codeurjc.springrestapiwithdb.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class User {
 
-    private String name;
-    private String lastName;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
-    public User(String name, String lastName) {
-        this.name = name;
-        this.lastName = lastName;
+    private String nickname;
+    private String email;
+
+    public User(String nickname, String email) {
+        this.nickname = nickname;
+        this.email = email;
     }
 
-    public String getName() {
-        return this.name;
+    public String getNickname() {
+        return this.nickname;
     }
 
-    public String getLastName() {
-        return this.lastName;
+    public String getEmail() {
+        return this.email;
     }
 
     @Override
     public String toString() {
-        return this.name + " " + this.lastName;
+        return this.nickname + " | " + this.email;
     }
 }

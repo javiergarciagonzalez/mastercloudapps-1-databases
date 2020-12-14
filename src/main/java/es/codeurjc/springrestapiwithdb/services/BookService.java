@@ -1,58 +1,22 @@
 package es.codeurjc.springrestapiwithdb.services;
 
-import java.io.IOException;
-import java.net.URL;
-import java.util.Arrays;
 import java.util.Collection;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentMap;
-import java.util.concurrent.atomic.AtomicLong;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import es.codeurjc.springrestapiwithdb.dtos.requests.BookRequestDto;
+import es.codeurjc.springrestapiwithdb.dtos.requests.CommentRequestDto;
+import es.codeurjc.springrestapiwithdb.dtos.responses.BookDetailsResponseDto;
+import es.codeurjc.springrestapiwithdb.dtos.responses.BookResponseDto;
+import es.codeurjc.springrestapiwithdb.dtos.responses.CommentResponseDto;
 
-import org.springframework.stereotype.Service;
+public interface BookService {
 
-import es.codeurjc.springrestapiwithdb.models.Book;
+    Collection<BookResponseDto> findAll();
 
-@Service
-public class BookService {
+    BookDetailsResponseDto save(BookRequestDto bookRequestDto);
 
-    private ConcurrentMap<Long, Book> books = new ConcurrentHashMap<>();
-    private AtomicLong nextId = new AtomicLong();
+    BookDetailsResponseDto findById(long bookId);
 
-    public BookService() {
-        this.preloadBooks();
-    }
+    CommentResponseDto addComment(long bookId, CommentRequestDto commentRequestDto);
 
-    public Collection<Book> findAll() {
-        return books.values();
-    }
-
-    public void save(Book book) {
-        long id = nextId.getAndIncrement();
-        if (book.getRating() == null) {
-            book.setRating(0);
-        }
-        book.setId(id);
-        this.books.put(id, book);
-    }
-
-    public Book findById(long id) {
-        return this.books.get(id);
-    }
-
-    public void itsOwnImage(Book book) {
-        book.setHasCustomImage(true);
-    }
-
-    private void preloadBooks() {
-        Book[] books;
-        try {
-            ObjectMapper objectMapper = new ObjectMapper();
-            books = objectMapper.readValue(new URL("file:src/main/resources/static/books.json"), Book[].class);
-            Arrays.asList(books).forEach(book -> this.save(book));
-        }catch(IOException e) {
-            e.printStackTrace();
-        }
-    }
+    CommentResponseDto deleteComment(long bookId, long commentId);
 }

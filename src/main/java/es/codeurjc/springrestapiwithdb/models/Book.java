@@ -1,8 +1,18 @@
 package es.codeurjc.springrestapiwithdb.models;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.Collection;
+import java.util.List;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Book {
 
     private Long id;
@@ -10,81 +20,15 @@ public class Book {
     private String summary;
     private String author;
     private String publisher;
-    private String publicationDate;
-    private Integer rating;
-    private Boolean hasCustomImage;
+    private int publicationYear;
+    private @Builder.Default Collection<Comment> comments = List.of();
 
-    @JsonCreator
-    public Book(
-        @JsonProperty("title") String title,
-        @JsonProperty("summary") String summary,
-        @JsonProperty("author") String author,
-        @JsonProperty("publisher") String publisher,
-        @JsonProperty("publicationDate") String publicationDate,
-        @JsonProperty("rating") Integer rating
-    ) {
-        this.title = title;
-        this.summary = summary;
-        this.author = author;
-        this.publisher = publisher;
-        this.publicationDate = publicationDate;
-        this.rating = rating;
-        this.hasCustomImage = false;
+    public float getScore() {
+        float score = 0;
+        for (Comment comment : this.comments) {
+            score += comment.getScore();
+        }
+        return this.comments.isEmpty() ? score : score / this.comments.size();
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return this.title;
-    }
-
-    public Long getId() {
-        return this.id;
-    }
-
-    public String getSummary() {
-        return this.summary;
-    }
-
-    public String getAuthor() {
-        return this.author;
-    }
-
-    public String getPublisher() {
-        return this.publisher;
-    }
-
-    public String getPublicationDate() {
-        return this.publicationDate;
-    }
-
-    public Boolean getHasCustomImage() {
-        return hasCustomImage;
-    }
-
-    public Integer getRating() {
-        return this.rating;
-    }
-
-    public void setHasCustomImage(Boolean value) {
-        this.hasCustomImage = value;
-    }
-
-    public void setRating(Integer rating) {
-        this.rating = rating;
-    }
-
-    @Override
-    public String toString() {
-        return
-            "Book: [id="+id+
-            ", title="+title+
-            ", summary="+summary+
-            ", author="+author.toString()+
-            ", publisher="+publisher+
-            ", publicationDate="+publicationDate+
-            ", rating:"+rating.toString()+"]";
-    }
 }

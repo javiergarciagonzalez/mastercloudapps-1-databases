@@ -19,7 +19,7 @@ public class ImageService {
 
     private static final Path FILES_FOLDER = Paths.get(System.getProperty("user.dir"), "images");
 
-    private Path createFilePath(long imageId, Path folder) {
+    private Path createFilePath(Long imageId, Path folder) {
         return folder.resolve("image-" + imageId + ".jpg");
     }
 
